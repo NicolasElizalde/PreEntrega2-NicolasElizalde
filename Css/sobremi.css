@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color:white;
+
+}
+.contenedor__sobremi{
+    width: 95%;
+    max-width: 1500px;
+    min-height:100px;
+    background-image: url("../Imagenes/SobreMi.jpg");
+    background-size:contain;
+    background-repeat:no-repeat;
+    border: 5px solid whitesmoke;
+    margin: auto;
+    font-size: 30px;
+    line-height: 50px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(2, 2fr) 3fr;
+    grid-template-rows: 1fr 6fr auto;
+    grid-template-areas: 
+    "logo menus menus"
+    "cont cont cont"
+    "cont cont cont"
+    "cont cont cont"
+     "img img img";
+     
+
+}
+.tituloSobremi, .menuSobremi,.principalSobremi,.imagenSobremi{
+
+    display:block;
+    padding: 20px;
+    
+}
+.menuSobremi{
+/*     grid-column: 2/-1;
+    grid-row: 1/2; */
+    grid-area: menus;
+}
+.principalSobremi{
+  /*   grid-column: 1/4;
+    grid-row: 2/3; */
+    grid-area: cont;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto auto auto;
+}
+.imagenSobremi{
+   /*  grid-column: 1/4;
+    grid-row: 3/4;
+    
+ */
+ grid-area: img;
+
+}
+.tituloSobremi{
+
+    display: flex;
+    justify-content: start;
+    border: 0;
+    padding: 0;
+    font-family:'Fleur De Leah', cursive;
+    color:#ca3900 ;
+
+}
+.flr{
+    width: 20%;
+    font-size:35px;
+    left: 40px;
+    display: grid;
+    justify-content: start;
+    z-index: 999;
+    
+
+
+}
+.eliz{
+    position: relative;
+    left: 70px;
+    bottom: 20px;
+    
+/*    display: flex;
+   justify-content: end;
+   padding-left: 70px; */
+
+}
+
+
+@media screen and (max-width:768px){ 
+.contenedor__sobremi{
+    grid-template-columns: repeat(2, 2fr) 3fr;
+    grid-template-rows: 1fr auto 2fr;
+    background-color:blue;
+ 
+}
+.flr{
+font-size: 30px;
+display: flex;
+
+}
+.eliz{
+    position:relative;
+    left: 8px;
+    bottom: 0px;
+}
+
+}
