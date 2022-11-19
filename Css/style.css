@@ -80,26 +80,80 @@
 .principalInicio{
 background-color: aqua;
 width: 90%;
-max-width: 1000px;
+max-width: 1500px;
+height: 600px;
+margin: 5px auto;
 display: grid;
-grid-template-columns: repeat(3, 1fr);
-grid-template-rows:1fr 1fr ;
+padding: 60px 0;
+grid-template-columns: repeat(4, 1fr);
+grid-template-rows:repeat(3, auto) ;
+grid-template-areas: "imagen imagen imagen imagen"
+                      "imagen imagen imagen imagen"
+                      "texto texto texto texto";
 
 }
-.imagendemierda{
-    transform: scale(0.2);
+.imgDeco__inicio{
+    grid-area: imagen;
+    display: flex;
+    grid-column: 1/-1;
+    grid-row:1/-1 ;
+    padding:100px;
+    height: 100px;
+    justify-content: center;
+    align-items: baseline;
+    gap: 5px;   
+    flex-wrap: wrap; 
 }
+.editInicio{
+    background-image:url("../Imagenes/principales/editorial\(4\).jpg");
+    background-size: 200px;
+    height: 300px;
+    background-repeat: no-repeat;
+    padding: 40px;
+    border: 0;
+}
+.natuInicio{
+    background-image: url("../Imagenes/principales/naturaleza\(2\).jpg");
+    background-size: 200px;
+    height: 300px;
+    background-repeat: no-repeat;
+    padding: 40px;
+    object-fit:cover;
 
+}
+.parejInicio{
+    background-image: url("../Imagenes/principales/Pareja\(4\).jpg");
+    background-size: 200px;
+    height: 300px;
+    background-repeat: no-repeat;
+    padding: 40px;
+    height: 300px;
+}
+.proyInicio{
+    background-image: url("../Imagenes/principales/Wonderland\(3\).jpg");
+    background-size: 200px;
+    height: 300px;
+    background-repeat: no-repeat;
+    padding: 40px;
+}
 
 .txt2{
+    grid-area: texto;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     font-size: 26px;
     margin-top: 50px;
     margin-bottom: -60px;
+    
 }
 
 .social{
 display: flex;
+align-items: baseline;
+justify-content: end;
 margin-top: 170px;
 margin-bottom: -200px;
 margin-left: -100px;
@@ -124,6 +178,25 @@ footer{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
+@media screen and (max-width: 768px) {
+    .portada{
+        display: flex
+        ;
+        margin-left: -800px;
+        margin-top: -150px;
+        
+    }
+    .lista__menu{
+        font-size: 20px;
+    }
+    .responsivetext{
+        margin-left: -1300px;
+        margin-top: 200px;
+        
+    }
+    
+
+}
 
 
 /* css contactos---------------------------------------- */
