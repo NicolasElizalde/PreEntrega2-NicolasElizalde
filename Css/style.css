@@ -31,8 +31,9 @@
     margin-bottom:-80px;
     
     color: #af6e50;
-    animation: Mis-Efectos;
-    animation-delay: 0s;
+
+
+   
 }
 .tituloPrincipal--Elizalde{
     display: block;
@@ -62,6 +63,7 @@
     font-size: 23px;
     font-family: 'Cormorant Garamond', serif;
     font-weight:bold;
+    animation: misefectos 1s 8s 2 linear;
 }
 
 .lista__menu a:hover{
@@ -153,15 +155,22 @@ footer{
     grid-column: 2/4;
     grid-row: 3/4;
 }
-@keyframes Mis-Efectos {
+.animate__animated.animate__tada{
+   --animate-duration: 10s;
+   --animate-repeat:6;
+
+}
+@keyframes misefectos{
     0%{
-        font-size:130px;
+        transform:scale();
+
     }
     50%{
-        font-size:250px;
-    }
+        font-size:23px;
+        transform: scale(2);}
     100%{
-        font-size:130px;
+        font-size:23px;
+        transform: scale(1);
     }
 }
 
@@ -175,11 +184,12 @@ footer{
     }
     .lista__menu{
         font-size: 20px;
+        z-index: 999;
     }
     .responsivetext{
         margin-left: -1300px;
         margin-top: 200px;
-        
+        padding: 0;
     }
     .txt2{
         display: block;
