@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body{
-    background-color:rgb(19, 27, 58);
+    background-color:rgb(255, 192, 104);
 
 }
 .contenedor__sobremi{
@@ -21,12 +21,13 @@ body{
     text-align: center;
     display: grid;
     grid-template-columns: repeat(3, 2fr);
-    grid-template-rows: auto auto auto 1fr;
+    grid-template-rows: auto auto 2fr 100px;
     grid-template-areas: 
     "cab cab cab"
     "cont cont cont"
      "img img img"
      "footer footer footer";
+     gap:35px;
      
 
 }
@@ -70,19 +71,23 @@ body{
     text-decoration: none;
     color: black;
     font-size: 30px;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight:bold;
 }
 .menu__sobremi--detalles li a:hover{
     text-decoration: underline;
+    font-size: 40px;
 }
 .principalSobremi{
     width: 90%;
     height: auto;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;;
   flex-wrap: wrap;
   position: relative;
   left: 15px;
   bottom: 100px;
+  gap: 5px;
 }
 .principalSobremi h2{
     grid-column: 1/2;
@@ -92,6 +97,58 @@ body{
 .principalSobremi p{
     grid-column: 1/2;
     grid-row:2/3
+}
+
+.imagenSobremi{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,auto);
+    padding: 20px 0;
+    margin: auto;
+    gap:10px;
+    justify-items: auto;
+}
+.cine, .libro, .viaje{
+    border: 5px black solid;
+}
+.img--cine{
+    grid-column: span 2;
+    grid-row: 1/2;
+    justify-content: center;
+    animation:backInLeft ;
+    animation-duration: 8s;
+}
+
+    
+.img--libro{
+    grid-column:2/4 ;
+    grid-row:2/3 ;
+    animation:backInRight ;
+    animation-delay: 3s;
+    animation-duration: 8s;
+}
+.img--viaje{
+    grid-column: 1/4;
+    grid-row: 3/4;
+    animation:backInLeft ;
+    animation-delay: 6s;
+    animation-duration: 8s;
+}
+.imagenSobremi img{
+width: 70%;
+}
+.footer--sobremi{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,auto);
+    background-color: whitesmoke;
+    margin-bottom: 0;
+    margin-top: 30px;
+    width: 90%;
+    height: 300px;
+    font-size: 15px;
+    font-weight: 100px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
 /* @media screen and (max-width:768px){ 
