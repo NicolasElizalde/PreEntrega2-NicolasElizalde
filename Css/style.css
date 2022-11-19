@@ -14,7 +14,7 @@
     background-size:cover;
     background-position: center center;
     background-position-y: -100px;  
-    margin-bottom: 50px;
+    margin-bottom: 25px;
     font-family:'Fleur De Leah', cursive;
     padding-bottom: 300px;
   
@@ -31,6 +31,8 @@
     margin-bottom:-80px;
     
     color: #af6e50;
+    animation: Mis-Efectos;
+    animation-delay: 0s;
 }
 .tituloPrincipal--Elizalde{
     display: block;
@@ -78,75 +80,33 @@
     
 }
 .principalInicio{
-background-color: aqua;
-width: 90%;
-max-width: 1500px;
-height: 600px;
-margin: 5px auto;
-display: grid;
-padding: 60px 0;
-grid-template-columns: repeat(4, 1fr);
-grid-template-rows:repeat(3, auto) ;
-grid-template-areas: "imagen imagen imagen imagen"
-                      "imagen imagen imagen imagen"
-                      "texto texto texto texto";
+    background-color:rgb(255, 204, 108);
+}
+.img__inicio{
+
+    width: 100%;
+    transition: all 1s;
 
 }
-.imgDeco__inicio{
-    grid-area: imagen;
+.img__inicio:hover {
+    transform: scale(2);
+}
+.img--inicio{
     display: flex;
-    grid-column: 1/-1;
-    grid-row:1/-1 ;
-    padding:100px;
-    height: 100px;
-    justify-content: center;
-    align-items: baseline;
-    gap: 5px;   
-    flex-wrap: wrap; 
+    padding: 5px;
+    gap: 5px;
 }
-.editInicio{
-    background-image:url("../Imagenes/principales/editorial\(4\).jpg");
-    background-size: 200px;
-    height: 300px;
-    background-repeat: no-repeat;
-    padding: 40px;
-    border: 0;
-}
-.natuInicio{
-    background-image: url("../Imagenes/principales/naturaleza\(2\).jpg");
-    background-size: 200px;
-    height: 300px;
-    background-repeat: no-repeat;
-    padding: 40px;
-    object-fit:cover;
-
-}
-.parejInicio{
-    background-image: url("../Imagenes/principales/Pareja\(4\).jpg");
-    background-size: 200px;
-    height: 300px;
-    background-repeat: no-repeat;
-    padding: 40px;
-    height: 300px;
-}
-.proyInicio{
-    background-image: url("../Imagenes/principales/Wonderland\(3\).jpg");
-    background-size: 200px;
-    height: 300px;
-    background-repeat: no-repeat;
-    padding: 40px;
+.fotos__main img{
+    margin-top: 5px;
 }
 
 .txt2{
-    grid-area: texto;
     margin: auto;
     display: flex;
     justify-content: center;
-    align-items: center;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     font-size: 26px;
-    margin-top: 50px;
-    margin-bottom: -60px;
+    gap: 10px;
     
 }
 
@@ -168,6 +128,9 @@ width: 30px;
     width: 15px;
 }
 footer{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,auto);
     background-color: whitesmoke;
     margin-bottom: 0;
     margin-top: 30px;
@@ -176,6 +139,30 @@ footer{
     font-size: 15px;
     font-weight: 100px;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+.ftMain{
+    grid-column: 1/3;
+    grid-row: 1/2;
+}
+.ftcopy{
+    grid-column: 1/4;
+    grid-row: 2/3;
+}
+.ftfrass{
+    grid-column: 2/4;
+    grid-row: 3/4;
+}
+@keyframes Mis-Efectos {
+    0%{
+        font-size:130px;
+    }
+    50%{
+        font-size:250px;
+    }
+    100%{
+        font-size:130px;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -183,7 +170,7 @@ footer{
         display: flex
         ;
         margin-left: -800px;
-        margin-top: -150px;
+        margin-top: -300px;
         
     }
     .lista__menu{
@@ -193,6 +180,11 @@ footer{
         margin-left: -1300px;
         margin-top: 200px;
         
+    }
+    .txt2{
+        display: block;
+        position: absolute;
+        top: 470px;
     }
     
 
