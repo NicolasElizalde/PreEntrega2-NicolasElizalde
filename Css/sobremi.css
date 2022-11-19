@@ -94,7 +94,7 @@ body{
     grid-row:2/3
 }
 
-@media screen and (max-width:768px){ 
+/* @media screen and (max-width:768px){ 
 .contenedor__sobremi{
     grid-template-columns: repeat(2, 2fr) 3fr;
     grid-template-rows: 1fr auto 2fr;
@@ -112,4 +112,4 @@ display: flex;
     bottom: 0px;
 }
 
-}
+} */
