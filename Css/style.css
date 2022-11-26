@@ -345,79 +345,185 @@ footer{
 
 /* Principal SobreMi */
 
-.Principal{
-    height: 100vh;
+
+body{
+    background-color:rgb(255, 192, 104);
+    
+
+}
+.contenedor__sobremi{
+    box-sizing: border-box;
+    width: 80%;
+    max-width: 1200px;
+    min-height:100px;
     background-image: url("../Imagenes/SobreMi.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    background-size:cover;
+    background-repeat:no-repeat;
+    border: 5px solid whitesmoke;
+    margin: 0 auto;
+    font-size: 30px;
+    line-height: 50px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    grid-template-rows: auto auto 2fr 100px;
+    grid-template-areas: 
+    "cab cab cab"
+    "cont cont cont"
+     "img img img"
+     "footer footer footer";
+     gap:35px;
+     
+
+}
+.tituloSobremi{
+    grid-area: cab;
+}
+.principalSobremi{
+    grid-area: cont;
+}
+.imagenSobremi{
+    grid-area: img;
+}
+.SobremiPie{
+    grid-area: footer;
+}
+
+.contenedor__head--sobremi{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.logoSobremi{
+    font-family:'Fleur De Leah', cursive;
+    font-size:30px;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+.menu__sobremi{
+    width: auto;
+}
+.menu__sobremi--detalles{
+    display: flex;
+    gap: 30px;
+}
+.menu__sobremi--detalles li{
+    list-style: none;
+}
+.menu__sobremi--detalles li a{
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight:bold;
+}
+.menu__sobremi--detalles li a:hover{
+    text-decoration: underline;
+    font-size: 40px;
+}
+.principalSobremi{
+    width: 100%;
+    height: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;;
+  flex-wrap: wrap;
+  position: relative;
+  left: 15px;
+  bottom: 100px;
+  gap: 5px;
+}
+.principalSobremi h2{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    text-align: center;
+}
+.principalSobremi p{
+    grid-column: 1/2;
+    grid-row:2/3
+}
+
+.imagenSobremi{
+    width: 100%;
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,auto);
+    padding: 20px 0;
+    margin: auto;
+    gap:10px;
+    justify-items: auto;
+}
+.cine, .libro, .viaje{
+    border: 5px black solid;
+}
+.img--cine{
+    grid-column: span 2;
+    grid-row: 1/2;
+    justify-content: center;
+    animation:backInLeft ;
+    animation-duration: 8s;
+}
+
+    
+.img--libro{
+    grid-column:2/4 ;
+    grid-row:2/3 ;
+    animation:backInRight ;
+    animation-delay: 3s;
+    animation-duration: 8s;
+}
+.img--viaje{
+    grid-column: 1/4;
+    grid-row: 3/4;
+    animation:backInLeft ;
+    animation-delay: 6s;
+    animation-duration: 8s;
+}
+.imagenSobremi img{
+width: 70%;
+}
+.footer--sobremi{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,auto);
+    background-color: whitesmoke;
+    margin-bottom: 0;
+    margin-top: 30px;
+    width: 90%;
+    height: 300px;
+    font-size: 15px;
+    font-weight: 100px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+@media screen and (max-width: 764px) {
+    body{
+        background-color: green;
+    }    
+    .menu__sobremi--detalles{
+        display: block;
+        width: 50%;
+    }
+    .menu__sobremi--detalles li a{
+        font-size: small;
+    }
+    .logoSobremi{
+        width: 50%;
+    }
+    .principalSobremi{
+        font-size: small;
     }
 
-    .encabezado__sobremi{
+
+}
+@media screen and (max-width: 514px){
+    .contenedor__sobremi{
         width: 100%;
-        padding: 10px;
-        display: flex;
-        justify-content: space-between;
-        margin-top: -25px;
-        
-
-
-    
-   
-    }
-    
-    .logoFlor{
-        background-color: rgb(115, 255, 220);
-        border-radius: 50%;
-        padding: 10px;
-        display: inline-block;
-        font-size:20px;
-        font-family:'Fleur De Leah', cursive;
-        color:#ca3900 ;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(7, auto);
     }
 
-    nav{
-        margin-left: -100%;
-        width: 100%;
-        height: 10vh;
-        padding: 0 100%;
-        display: flex;
-        align-items: center;
-        justify-content:end;
-        flex-direction: row;
-        
+}
 
-    }
-    .menu__sobremi{
-        display: flex;
-        flex-direction: row;
-        gap: 30%;
-        text-decoration: none;
-        
-
-        
-    }
-
-    .Sobremi{
-        list-style-type: none;
-        display: inline;
-        font-size: 23px;
-        font-family: 'Cormorant Garamond', serif;
-        font-weight:bold;   
-
-    }
-
-    div nav ul li a{
-        padding: 15px;
-        text-decoration: none;
-        color: black;
-    }
-    div nav ul li a:hover{
-        text-decoration: underline;
-        background-color: black;
-        color: white;
-        border-radius: 50%;
-    }
-   
-       
-    
