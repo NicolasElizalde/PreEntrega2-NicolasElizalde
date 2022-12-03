@@ -58,7 +58,7 @@
 }
 .subtitulo{
     font-size:35px;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family:'Cormorant Garamond', serif;
     color: #af6e50;
     position: relative;
     bottom: 40px;
@@ -135,7 +135,7 @@
     margin: auto;
     display: flex;
     justify-content: center;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family:'Cormorant Garamond', serif;
     font-size: 26px;
     gap: 10px;
     flex-direction: column;
@@ -160,7 +160,7 @@ width: 30px;
 .copyright {
     width: 15px;
 }
-footer{
+.footerMain{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: repeat(3,auto);
@@ -171,7 +171,7 @@ footer{
     height: 300px;
     font-size: 15px;
     font-weight: 100px;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family:'Cormorant Garamond', serif;
     
 }
 .ftMain{
@@ -196,7 +196,7 @@ footer{
     
 }
 .txt2{
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family:'Cormorant Garamond', serif;
     font-weight: bold;
 }
 @keyframes misefectos{
@@ -308,37 +308,42 @@ footer{
      background-color: rgb(234, 245, 245);
      font-family: 'Cormorant Garamond', serif;
             /* ira una imagen que no tengo definida */
-    }
-
-.logo{
-    display: inline;
-    color: #af6e50;
-    height: 100px;
-    width: 100px;
-    /* font: ¿?; */
-    font-size: 30px;
-    padding: 10px;
-
+    font-size: 16px;
 }
-.logo__top{
-    margin-top: -30px;
-    margin-left: 10px;
- 
-}
-.logo.bottom{
-    margin-top: -35px;
-    margin-left: 90px;
-
-}
-.menuContactos{
-    margin-top: -155px;
-    margin-bottom: 100px;
+.nomb--cont a{
+    font-family:'Fleur De Leah', cursive;
 }
 
+.dosform{
+    display: flex;
+    justify-content: space-around;
+}
+.tresform{
+    display: flex;
+    justify-content: space-between;
+}
+.imagenSociales--contacto img{
+    width: 1.5em;
+}
+.infoCont{
+    font-size: 2rem;
+    font-style: italic;
+    text-align: start;
 
+}
+.contacto footer{
+    background-color: whitesmoke;
+    padding: 1rem;
 
-
-
+}
+.final-text{
+    font-style: italic;
+    display: flex;
+    padding: 2rem;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+}
 
 
 
