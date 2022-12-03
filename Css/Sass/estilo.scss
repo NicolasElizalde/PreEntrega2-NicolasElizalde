@@ -50,13 +50,76 @@
         display: flex;
         justify-content: end;
         align-items: center;
-        .tituloPrincipal--Elizalde{
+        .tituloPrincipal--Florencia{
+            font-size:100px;
+            font-weight: 100;
+            font-family:'Fleur De Leah', cursive;
             position: relative;
-            bottom: 35px;
-            left: 40px;
+            right: 25px;
+            color: #af6e50;
+            margin: auto;
+            .tituloPrincipal--Elizalde{
+                position: relative;
+                bottom: 35px;
+                left: 40px;
         
-            
         
+            }
+            .subtitulo{
+                font-size:35px;
+                font-family:'Cormorant Garamond', serif;
+                color: #af6e50;
+                position: relative;
+                bottom: 40px;
+                left: 35px;
+                margin:0;
+                width: 40px;
+            }
         }
-    }   
+    } 
+    .principalInicio{
+        background-color:rgb(255, 204, 108);
+        margin: auto;
+        .img--inicio{
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2em;
+            grid-template-rows: repeat(2, auto);
+            .resp--img{
+                display: flex;
+                justify-content: start;
+                gap: 2em;
+                justify-content: center;
+                text-align: center;
+                .img__inicio{
+
+                    width: 100%;
+                    transition: all 1s;
+                    max-height: 399px;
+                    border: black solid;
+                    border-radius: 25%;
+                }
+                .img__inicio:hover {
+                    transform: scale(2);}
+            }
+            .txt2{
+                margin: auto;
+                display: flex;
+                justify-content: center;
+                font-family:'Cormorant Garamond', serif;
+                font-size: 26px;
+                gap: 10px;
+                flex-direction: column;
+                align-items: center;
+            }  
+        }
+        .social{
+            display: flex;
+            align-items: baseline;
+            justify-content: end;
+            margin-top: 170px;
+            margin-bottom: -200px;
+            margin-left: -100px;
+        }
+    }  
 }}
