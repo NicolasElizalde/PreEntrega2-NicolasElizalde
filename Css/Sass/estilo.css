@@ -128,4 +128,7 @@
 body section .portfolio--font {
   font-family: "Cormorant Garamond", serif;
   color: rgb(222, 33, 33);
+}
+body h1 {
+  font-family: "Fleur De Leah", cursive;
 }/*# sourceMappingURL=estilo.css.map */
