@@ -122,4 +122,10 @@
   margin-top: 170px;
   margin-bottom: -200px;
   margin-left: -100px;
+}
+
+/* Portfolio */
+body section .portfolio--font {
+  font-family: "Cormorant Garamond", serif;
+  color: rgb(222, 33, 33);
 }/*# sourceMappingURL=estilo.css.map */

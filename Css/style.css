@@ -128,7 +128,7 @@
     grid-template-rows: repeat(2, auto);
 }
 .fotos__main img{
-    margin-top: 5px;
+    margin-top: 5px; /* cual? */
 }
 
 .txt2{
@@ -149,7 +149,7 @@ align-items: baseline;
 justify-content: end;
 margin-top: 170px;
 margin-bottom: -200px;
-margin-left: -100px;
+margin-left: -100px; /* acomodar */
 
 }
 
