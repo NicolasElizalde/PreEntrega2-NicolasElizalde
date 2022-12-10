@@ -1,0 +1,743 @@
+/* mixins */
+@mixin color($color){
+    color: #af6e50;
+}
+
+/* ---- */
+*{
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    box-sizing:border-box;
+}
+.inicio{
+    background-color: rgb(56, 56, 82);
+    .Responsive--inicio{
+        margin: 0 auto;
+        .portada{
+            background-image: url("../Imagenes/principales/editorial\(6\).jpg");
+            background-repeat: no-repeat;
+            background-size:cover;
+            background-position: center center;
+            display: grid;
+            grid-template-columns: repeat(2, auto);
+            grid-template-rows:auto 6fr;
+            margin: 0;
+            margin-bottom: 5px;
+            height: 600px;
+            width:100% ;
+            .lista__menu{
+                grid-column: 2/3;
+                grid-row: 1/2;
+                 text-decoration: underline;
+                 list-style-type: none; 
+                 margin-right: 20px;
+                 .div{
+                        display:flex;
+                        flex-direction: row;
+                        justify-content: end;
+                        gap: 30px;
+                        a{
+                            color:black ;
+                            text-decoration: none;
+                            display: inline-block;
+                            font-size: 23px;
+                            font-family: 'Cormorant Garamond', serif;
+                            font-weight:bold;
+                            animation: misefectos 1s 8s 2 linear;
+                        }
+                        a:hover{
+                            text-decoration: underline ;
+                        }                    
+                 }
+                }
+            }
+           
+        .florenciaElizalde--titulo{
+            grid-column: 2/3;
+            grid-row: 2/3;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            .tituloPrincipal--Florencia{
+                font-size:100px;
+                font-weight: 100;
+                font-family:'Fleur De Leah', cursive;
+                position: relative;
+                right: 25px;
+                @include color;
+                margin: auto;
+                .arreglosub{
+                    .tituloPrincipal--Elizalde{
+                        position: relative;
+                        bottom: 35px;
+                        left: 40px;
+                    }
+                    .subtitulo{
+                        font-size:35px;
+                        font-family:'Cormorant Garamond', serif;
+                        @include color;  
+                        position: relative;
+                        bottom: 40px;
+                        left: 35px;
+                        margin:0;
+                        width: 40px;
+                    }
+
+                }
+            }
+        }
+        .principalInicio{
+            background-color:rgb(255, 204, 108);
+            margin: auto;
+            .img--inicio{
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 2em;
+                grid-template-rows: repeat(2, auto);
+                .resp--img{
+                    display: flex;
+                    justify-content: start;
+                    gap: 2em;
+                    justify-content: center;
+                    text-align: center;
+                    .fotos--inicio{
+                        .img__inicio{
+                            width: 10%;
+                            transition: all 1s;
+                            max-height: 399px;
+                            border: black solid;
+                            border-radius: 25%;
+                        }
+                        .img__inicio:hover {
+                            transform: scale(2);}
+                    }
+                }
+                .txt2{
+                    margin: auto;
+                    display: flex;
+                    justify-content: center;
+                    font-family:'Cormorant Garamond', serif;
+                    font-size: 26px;
+                    gap: 10px;
+                    flex-direction: column;
+                    align-items: center;
+                    font-weight: bold;
+                    .animate__animated.animate__tada{
+                        --animate-duration: 10s;
+                        --animate-repeat:6;
+                     
+                     }
+                }  
+            }
+            .social{
+                display: flex;
+                align-items: baseline;
+                justify-content: end;
+                margin-top: 170px;
+                margin-bottom: -200px;
+                margin-left: -100px;
+                .social-imagen {
+                    width: 30px;
+                    }
+            }    
+        } 
+        .footerMain{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(3,auto);
+            background-color: whitesmoke;
+            margin-bottom: 0;
+            margin-top: 30px;
+            width: auto;
+            height: 300px;
+            font-size: 15px;
+            font-weight: 100px;
+            font-family:'Cormorant Garamond', serif;
+            .ftMain{
+                grid-column: 1/3;
+                grid-row: 1/2;
+                .copyright {
+                    width: 15px;
+                }
+            }
+            .ftcopy{
+                grid-column: 1/4;
+                grid-row: 2/3;
+            }
+            .ftfrass{
+                grid-column: 2/4;
+                grid-row: 3/4;
+            }
+            
+        }  
+        
+
+@keyframes misefectos{
+    0%{
+        transform:scale();
+
+    }
+    50%{
+        font-size:23px;
+        transform: scale(2);}
+    100%{
+        font-size:23px;
+        transform: scale(1);
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .inicio{
+        margin: 0 auto;
+        .Responsive--inicio{ /* 1 */
+            margin: 0 auto;
+            width: 30%;
+            max-width: 75em;
+            display: grid;
+            grid-template-columns: repeat(3, auto);
+            grid-template-rows: auto auto auto 1fr;
+            grid-template-areas: "port port port"
+                                  "port port port"
+                                  "cont cont cont"
+                                  "fut fut fut";
+            margin: 0 auto;
+            margin: 0 auto;
+            .principalInicio{ /* 2 */
+                margin: 2px 1em;
+                padding: 3em;
+                .img--inicio{
+                    display: grid;
+                    grid-template-columns: repeat(4,1fr);
+                    grid-template-rows: repeat(3,auto);
+                    padding: 1em;
+                    .resp--img{
+                        grid-row: 1/3;
+                        grid-column: 1/-1;
+                        display: flex;
+                        flex-wrap: wrap;
+                        .fotos--inicio{
+                            padding: 15px;
+                            .img__inicio{
+                                width: 100%;
+                            }
+                        }
+                    }
+                    .txt2{ 
+                        grid-template-rows: 3/4;
+                        font-size: 1em;
+                        justify-content: flex-start;
+                    }  
+                }
+                .social{
+                    display: none;
+                }    
+
+            
+        }
+    
+        .portada{
+            grid-area: port;
+            display:grid;
+            grid-template-columns: repeat(2, auto);
+            grid-template-rows: repeat(2,auto);
+            width: 100%;
+            max-width: 100%;
+            .lista__menu{
+                grid-column: 1/2;
+                grid-row: 1/2;
+                display: flex;
+                justify-content: center;
+                font-size: 1em;              
+                 }
+            
+        }
+        .florenciaElizalde--titulo{
+            grid-column: 1/2;
+            grid-row: 2/3;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            top: 30px;
+            color: black;
+            font-size: 2em ;
+            .tituloPrincipal--Florencia{
+                color: black;
+            }
+        } 
+        } 
+        .footerMain{
+             grid-area: fut;
+             font-size: 1em;            
+        }  
+        
+    }
+
+    }
+}
+} 
+    
+    
+
+
+   /* ----------- Contactos */
+.contacto{
+    background-color: rgb(234, 245, 245);
+    font-family: 'Cormorant Garamond', serif;          
+    font-size: 16px;
+    .nomb--cont{
+        a{
+            font-family:'Fleur De Leah', cursive;
+         }
+    }
+    .principalContact{
+        .contenedorPrinc{
+            .dosform{
+                display: flex;
+                justify-content: space-around;
+             }
+        }
+        .imagenSociales--contacto{
+            img{
+                width: 1.5em;
+             }
+        }
+    }
+    footer{
+        background-color: whitesmoke;
+        padding: 1rem;
+        .infoCont{
+            font-size: 2rem;
+            font-style: italic;
+            text-align: start;
+         
+         }
+    }
+    section{
+        .final-text{
+            font-style: italic;
+            display: flex;
+            padding: 2rem;
+            align-items: center;
+            justify-content: center;
+            justify-items: center;
+         }
+    }
+}
+
+/* --------- Sobre mi */
+
+
+body{
+    background-color:rgb(255, 192, 104);
+    .contenedor__sobremi{
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 1200px;
+        min-height:100px;
+        background-image: url("../Imagenes/SobreMi.jpg");
+        background-size:cover;
+        background-repeat:no-repeat;
+        border: 5px solid whitesmoke;
+        margin: 0 auto;
+        font-size: 2em;
+        line-height: 1em;
+        text-align: center;
+        display: grid;
+        grid-template-columns: repeat(3, 2fr);
+        grid-template-rows: auto auto 2fr;
+        grid-template-areas: 
+        "cab cab cab"
+        "cont cont cont"
+         "img img img";
+         gap:1em;
+         .tituloSobremi{
+            grid-area: cab;
+            .contenedor__head--sobremi{
+                 width: 100%;
+                 height: 200px;
+                 display: flex;
+                 justify-content: space-between;
+                 align-items: flex-start;
+                 .logoSobremi{
+                    font-family:'Fleur De Leah', cursive;
+                    font-size:30px;
+                    margin-top: 1em;
+                    margin-left: 5px;
+                }
+                .menu__sobremi{
+                    width: auto;
+                    .menu__sobremi--detalles{
+                        display: flex;
+                        gap: 30px;
+                        li{
+                            list-style: none;
+                            a{
+                                text-decoration: none;
+                                color: black;
+                                font-size: 1em;
+                                font-family: 'Cormorant Garamond', serif;
+                                font-weight:bold;
+                                
+                            }
+                            a:hover{
+                                text-decoration: underline;
+                                font-size: 2em;
+                            }
+                            
+                        }
+                    }
+                }
+            }
+
+        }
+        .principalSobremi{
+            grid-area: cont;
+            width: 100%;
+            height: auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;;
+            flex-wrap: wrap;
+            position: relative;
+            left: 15px;
+            bottom: 100px;
+            gap: 5px;
+            h2{
+                grid-column: 1/2;
+                grid-row: 1/2;
+                text-align: center;
+            
+            }
+            p{
+                grid-column: 1/3;
+                grid-row:2/3;
+                width: 60%;
+                height: fit-content; 
+            }
+        }
+        .imagenSobremi{
+            grid-area: img;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: repeat(3,auto);
+            text-align: center;
+            width: 100%;
+            .img--cine, .img--libro, .img--viaje{
+                display: flex;
+                align-items: center;
+            }
+            .cine, .libro, .viaje{
+                border: 5px black solid;
+                display: flex;
+                width: 40%;
+                height: 10em;
+            }
+            .img--cine{
+                grid-column: span 2;
+                grid-row: 1/2;
+                justify-content: center;
+                animation:backInLeft ;
+                animation-duration: 8s;
+                background-color: black;
+                color: white;
+                border:2px grey solid;
+                border-style: dotted;
+            }
+            .img--libro{
+                grid-column:1/3 ;
+                grid-row:2/3 ;
+                animation:backInRight ;
+                animation-delay: 3s;
+                animation-duration: 8s;
+                flex-direction: row-reverse;
+                background-color: black;
+                color: white;
+                border:2px grey solid;
+                border-style: dotted;
+            }
+            .img--viaje{
+                grid-column: 1/4;
+                grid-row: 3/4;
+                animation:backInLeft ;
+                animation-delay: 6s;
+                animation-duration: 8s;
+                background-color: black;
+                color: white;
+                border:2px grey solid;
+                border-style: dotted;
+            }
+            img{
+                width: 50%;
+                }
+        }
+         
+    
+    }
+    
+
+}
+
+
+@media screen and (max-width: 1020px) {
+    
+body{
+    background-color: gray;
+    font-size: 16px;
+    .contenedor__sobremi{/* 2 */
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, auto);
+        column-gap: 5px;
+         .tituloSobremi{
+            .contenedor__head--sobremi{/* 3 */
+                grid-column: 1/3;
+                grid-row: 1/2;
+                justify-content: space-around;
+                align-items: flex-start;
+                 .logoSobremi{/* 9 */
+                    display: none;
+                }
+                .menu__sobremi{
+                    .menu__sobremi--detalles{ /* 8 */
+                        width: 100%;
+                        font-size: 1.5rem;
+                        li{
+                            a{/* 7 */
+                                font-size: 1em;
+                            }                            
+                        }
+                    }
+                }
+            }
+
+        }
+        .principalSobremi{/* 4 */
+            grid-column: 1/3;
+            grid-row: 2/3;
+            width: 90%;
+            margin:0 auto ;
+            font-size: small;
+            h2{/* 5 */
+                grid-column: 1/3;
+                text-align: start;
+                font-size: 2rem;
+                font-weight: lighter;
+            }
+        }
+        .imagenSobremi{/* 6 */
+            grid-column: 1/3;
+            grid-row: 3/4;
+            font-size: 2rem;
+            width: 100%;
+            margin: 2px auto;
+        }
+         
+    
+    }
+    
+
+}
+
+}
+@media screen and (max-width:758px) {
+    body{
+        background-color: gray;
+        font-size: 16px;
+        .contenedor__sobremi{/* 2 */
+            width: 100%;
+            background-size: 100%;
+            grid-template-rows: auto 8rem auto;
+            background-color: lightgrey;
+            background-attachment: fixed;
+            .principalSobremi{/* 4 */
+                font-size: 1rem;
+                margin: 0 auto;
+                max-height: fit-content;
+                font-size: 0.5rem;           
+        
+            }
+        
+    
+    }
+ }  
+}
+
+
+/* a partir de aca */
+@media screen and (max-width: 620px) {
+    
+body{
+    background-color: gray;
+    font-size: 16px;
+    .contenedor__sobremi{/* 2 */
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr auto;
+        background-image: none;
+         .tituloSobremi{
+            .contenedor__head--sobremi{/* 3 */
+                grid-column: 1/3;
+                grid-row: 1/2;
+                justify-content: space-around;
+                align-items: flex-start;
+                 .logoSobremi{/* 9 */
+                    display: none;
+                }
+                .menu__sobremi{
+                    .menu__sobremi--detalles{ /* 8 */
+                        font-size: 1rem;
+                        display: flex;
+                        gap: 10px;
+                        li{
+                            a{/* 7 */
+                                font-size: 1em;
+                            }                            
+                        }
+                    }
+                }
+            }
+
+        }
+        .principalSobremi{/* 4 */
+            background-image: url("../Imagenes/SobreMi.jpg");
+            background-size: 100%;
+            width: 100%;
+            height: 28.25rem;
+            margin-top: -5rem;
+            margin-bottom: -6rem;
+            h2{/* 5 */
+                grid-column: 1/3;
+                display: flex;
+                align-items: flex-end;
+                justify-content: space-around;
+                font-size: 2rem;
+                font-weight: lighter;
+            }
+            p{
+                width: 100%;
+                grid-column: 1/3;
+                grid-row: 2/3;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                position: relative;
+                top: 7rem;
+            }
+        }
+        .imagenSobremi{/* 6 */
+            grid-column: 1/3;
+            grid-row: 3/4;
+            font-size: 2rem;
+            width: 100%;
+            margin: 2px auto;
+        }
+         
+    
+    }
+    
+
+}
+
+}
+
+@media screen and (max-width:390px) {
+        
+body{
+    background-color: white;
+    .contenedor__sobremi{/* 2 */
+        border: black solid 10px;
+        border-radius: 2%;
+        background-image:url(../Imagenes/Foto.jpg);
+        background-size:cover;
+        background-position: center;
+        background-color: white;
+        font-size: 1rem;
+        display: grid;
+        grid-template-columns: repeat(2,auto);
+        grid-template-rows: repeat(4,auto);
+        grid-template-areas: 
+        "menu menu"
+        "cont cont"
+        "img img"
+        "img img"
+        "img img"
+        "foot foot";
+        margin: 0 5px;
+        width: 100%;
+         .tituloSobremi{
+            grid-area: menu;
+            max-height: 5rem;
+            .contenedor__head--sobremi{/* 3 */
+                grid-column: 1/3;
+                grid-row: 1/2;
+                justify-content: space-around;
+                align-items: flex-start;
+                 .logoSobremi{/* 9 */
+                    display: none;
+                }
+                .menu__sobremi{
+                    .menu__sobremi--detalles{ /* 8 */
+                        font-size: 1rem;
+                        display: flex;
+                        gap: 10px;
+                        li{
+                            a{/* 7 */
+                                font-size: 1em;
+                            }                            
+                        }
+                    }
+                }
+            }
+
+        }
+        .principalSobremi{/* 4 */
+            background-image: none;
+            grid-area: cont;
+            h2{/* 5 */
+                display: none;
+            }
+            p{
+                grid-row: 1/2;
+                width: 90%;
+            }
+        }
+        .imagenSobremi{/* 6 */
+            grid-area: foot;
+            font-size: 1rem;
+        }
+        .footer--sobremi{
+            font-size: 0.8rem;
+            width: 100%;
+            margin: 0 5px;
+        }
+    
+    }
+    
+
+}
+
+}
+
+
+
+
+
+
+
+
+
+/* Portfolio */
+body{
+    section{
+        .portfolio--font{
+            font-family:'Cormorant Garamond', serif;
+            color: rgb(222, 33, 33);
+        }
+    }
+    h1{
+        font-family:'Fleur De Leah', cursive;
+    }
+}
+
+

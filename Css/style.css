@@ -127,9 +127,7 @@
     gap: 2em;
     grid-template-rows: repeat(2, auto);
 }
-.fotos__main img{
-    margin-top: 5px; /* cual? */
-}
+
 
 .txt2{
     margin: auto;
